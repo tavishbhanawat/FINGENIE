@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Fingenie</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" defer src="firebase-auth.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <div class="logo-img" style="height:40px;width:40px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;">F</div>
+      <span class="logo-text">Fingenie</span>
+    </div>
+  </header>
+
+  <section class="hero" style="max-width:400px; margin: 40px auto; padding: 20px; background: #222; border-radius: 12px; color: #ffd700;">
+    <h2>Login or Register</h2>
+    <form id="login-register-form" style="display:flex; flex-direction: column; gap: 15px;">
+      <input type="text" id="name" placeholder="Full Name" required style="padding:8px; border-radius:6px; border:none;"/>
+      <input type="tel" id="phone" placeholder="Phone Number" required style="padding:8px; border-radius:6px; border:none;"/>
+      <input type="email" id="email" placeholder="Email Address" required style="padding:8px; border-radius:6px; border:none;"/>
+      <input type="password" id="password" placeholder="Password" required style="padding:8px; border-radius:6px; border:none;"/>
+      <button type="submit" class="login-button" style="padding:12px; font-weight:bold; cursor:pointer;">Submit</button>
+    </form>
+    <div id="form-error" style="color:#ff6666; margin-top:10px;"></div>
+  </section>
+</body>
+</html>

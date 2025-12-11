@@ -1,0 +1,93 @@
+/* SIP Analyzer Styles */
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 18px;
+  transition: color 0.2s;
+  padding: 0 8px 0 0;
+  vertical-align: middle;
+}
+.back-btn:hover {
+  color: #fff;
+}
+.voice-btn {
+  background-color: #222;
+  color: #ffd700;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.voice-btn:active, .voice-btn.listening {
+  background: #ffd700;
+  color: #111;
+}
+
+/* Responsive SIP Analyzer Styles */
+@media (max-width: 600px) {
+  .hero {
+    padding: 20px 5px;
+  }
+  .icon-grid, .feature {
+    grid-template-columns: 1fr !important;
+    min-width: unset !important;
+    width: 100% !important;
+  }
+  #sip-summary > div {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .feature {
+    width: 100% !important;
+    min-width: unset !important;
+    margin-bottom: 10px;
+  }
+  #sip-chart {
+    min-width: 0 !important;
+    width: 100% !important;
+    height: 180px !important;
+  }
+}
+
+/* Chart container responsive fix */
+#sip-chart {
+  width: 100% !important;
+  min-width: 200px;
+  max-width: 500px;
+  height: 220px !important;
+  background: #111;
+  border-radius: 12px;
+}
+
+/* Chart grid for SIP Analyzer */
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+  margin: 40px auto 0;
+  max-width: 900px;
+}
+.pie-chart-container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 500px;
+  }
+  .pie-chart-container {
+    max-width: 100%;
+  }
+}

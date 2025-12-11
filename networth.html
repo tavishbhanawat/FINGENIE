@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Net Worth Tracker – Fingenie</title>
+  <link rel="stylesheet" href="networth.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <header class="header">
+    <button class="back-btn" onclick="window.location.href='index.html'" title="Back to Home">←</button>
+    <div class="logo-section">
+      <div class="logo-img" style="height:40px;width:40px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;">F</div>
+      <span class="logo-text">Fingenie</span>
+    </div>
+    <div class="spacer"></div>
+  </header>
+
+  <section class="hero">
+    <h1>Net Worth Tracker</h1>
+    <p>Calculate your financial health by summarizing all your assets and liabilities with AI-powered insights.</p>
+    <button id="voice-btn" class="voice-btn" title="Voice Input">🎤 Speak Financial Data</button>
+    <form id="networth-form" style="max-width:500px;margin:0 auto;text-align:left;">
+      <fieldset>
+        <legend>Assets</legend>
+        <label>Cash<br><input type="number" id="asset-cash" required placeholder="Enter cash amount" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+        <label>Property<br><input type="number" id="asset-property" required placeholder="Enter property value" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+        <label>Mutual Funds<br><input type="number" id="asset-mutualfunds" required placeholder="Enter mutual funds value" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+        <label>Stocks<br><input type="number" id="asset-stocks" required placeholder="Enter stocks value" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+      </fieldset>
+      <fieldset>
+        <legend>Liabilities</legend>
+        <label>Credit Card Dues<br><input type="number" id="liability-creditcard" required placeholder="Enter credit card dues" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+        <label>Personal Loans<br><input type="number" id="liability-personalloan" required placeholder="Enter personal loan amount" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+        <label>EMIs<br><input type="number" id="liability-emis" required placeholder="Enter EMI amount" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+      </fieldset>
+      <button type="submit" class="login-button" style="width:100%;">Calculate Net Worth</button>
+    </form>
+
+    <div id="networth-summary" style="display:none;margin-top:30px;">
+      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Total Assets</div>
+          <div id="total-assets" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Total Liabilities</div>
+          <div id="total-liabilities" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Net Worth</div>
+          <div id="net-worth" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+      </div>
+      <div class="chart-grid" style="margin-top:20px;">
+        <div style="max-width:500px;min-width:200px;width:100%;">
+          <canvas id="networth-trend-chart" height="200" aria-label="Net Worth Trend Chart" role="img" style="width:100%;background:#111;border-radius:12px;"></canvas>
+        </div>
+        <div id="networth-piechart" style="width:100%;max-width:350px;height:220px;margin:0 auto;background:#111;border-radius:12px;"></div>
+      </div>
+      <div id="networth-ai-chat" style="margin:30px auto 0;max-width:500px;text-align:left;">
+        <div class="feature" style="background:#222;">
+          <div class="label">AI Insight</div>
+          <div id="ai-response" style="margin-top:10px;">Your net worth analysis will appear here.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Fingenie. Smart money moves start here.</p>
+  </footer>
+  <script type="module" src="auth-check.js"></script>
+  <script src="networth.js"></script>
+</body>
+</html>

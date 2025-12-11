@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fingenie – AI Financial Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  
+  <script type="module" defer src="firebase-auth.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <div class="logo-img" style="height:40px;width:40px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;">F</div>
+      <span class="logo-text">Fingenie</span>
+    </div>
+    <div class="spacer"></div>
+    <div class="right-controls">
+      <div class="menu-icon" id="menu-icon" style="cursor:pointer;">
+        <div></div><div></div><div></div>
+      </div>
+      <button id="login-button" class="login-button">Login</button>
+    </div>
+    <div id="dropdown-menu" class="dropdown hidden">
+      <span id="close-dropdown" style="position:absolute;top:8px;right:12px;font-size:22px;cursor:pointer;color:#ffd700;">&times;</span>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="faqs.html">FAQs</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Your AI-Powered Financial Assistant</h1>
+    <p>Click below to explore features</p>
+    <div class="icon-grid">
+      <a href="sip.html" class="feature">
+        <div class="icon">📈</div>
+        <div class="label">SIP Analyzer</div>
+      </a>
+      <a href="loan.html" class="feature">
+        <div class="icon">🏦</div>
+        <div class="label">Loan Calculator</div>
+      </a>
+      <a href="networth.html" class="feature">
+        <div class="icon">💰</div>
+        <div class="label">Net Worth</div>
+      </a>
+      <a href="financialgoals.html" class="feature">
+        <div class="icon">🎯</div>
+        <div class="label">Financial Goals</div>
+      </a>
+      <a href="anomaly.html" class="feature">
+        <div class="icon">⚠️</div>
+        <div class="label">Anomaly Detection</div>
+      </a>
+      <a href="privacy.html" class="feature">
+        <div class="icon">🔐</div>
+        <div class="label">Privacy & Access</div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Fingenie. Smart money moves start here.</p>
+  </footer>
+</body>
+</html>

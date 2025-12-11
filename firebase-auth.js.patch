@@ -1,0 +1,9 @@
+errorDiv.textContent = 'Please fill in all fields.';
+  return;
+}
+=======
+if (!name || !phone || !email || !password) {
+  errorDiv.textContent = 'Please fill in all fields.';
+  errorDiv.style.color = 'red';
+  return;
+}

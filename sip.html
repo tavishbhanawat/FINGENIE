@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIP Analyzer – Fingenie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sip.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <header class="header">
+    <button class="back-btn" onclick="window.location.href='index.html'" title="Back to Home">←</button>
+    <div class="logo-section">
+      <div class="logo-img" style="height:40px;width:40px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;">F</div>
+      <span class="logo-text">Fingenie</span>
+    </div>
+    <div class="spacer"></div>
+  </header>
+
+  <section class="hero">
+    <h1>SIP Analyzer</h1>
+    <p>Track your SIPs, analyze performance, and get AI-powered insights.</p>
+    <button id="voice-btn" class="voice-btn" title="Voice Input">🎤 Speak SIP Details</button>
+    <form id="sip-form" style="max-width:400px;margin:0 auto;text-align:left;">
+      <label>Amount<br><input type="number" id="sip-amount" required placeholder="Enter SIP amount" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;"></label><br>
+      <label>Frequency<br>
+        <select id="sip-frequency" style="width:100%;padding:8px;margin-bottom:10px;">
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+        </select>
+      </label><br>
+      <label>Fund Type<br>
+        <select id="sip-fund-type" style="width:100%;padding:8px;margin-bottom:10px;">
+          <option value="equity">Equity</option>
+          <option value="debt">Debt</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+      </label><br>
+      <button type="submit" class="login-button" style="width:100%;">Analyze</button>
+    </form>
+    <div id="sip-summary" style="display:none;margin-top:30px;">
+      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Total Invested</div>
+          <div id="total-invested" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Current Value</div>
+          <div id="current-value" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Returns %</div>
+          <div id="returns-percent" style="font-size:20px;font-weight:bold;">0%</div>
+        </div>
+        <div class="feature" style="min-width:140px;">
+          <div class="label">Forecasted Value</div>
+          <div id="forecasted-value" style="font-size:20px;font-weight:bold;">₹0</div>
+        </div>
+      </div>
+      <div class="chart-grid">
+        <div style="max-width:500px;min-width:200px;width:100%;">
+          <canvas id="sip-chart" height="200" aria-label="SIP Value Chart" role="img" style="width:100%;background:#111;border-radius:12px;"></canvas>
+        </div>
+        <div id="google-piechart" style="width:100%;max-width:350px;height:220px;margin:0 auto;background:#111;border-radius:12px;"></div>
+      </div>
+      <div id="sip-ai-chat" style="margin:30px auto 0;max-width:500px;text-align:left;">
+        <div class="feature" style="background:#222;">
+          <div class="label">AI Insight</div>
+          <div id="ai-response" style="margin-top:10px;">Your SIP analysis will appear here.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Fingenie. Smart money moves start here.</p>
+  </footer>
+  <script type="module" src="auth-check.js"></script>
+  <script src="sip.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* Net Worth Tracker specific styles */
+
+body {
+  background-color: #121212;
+  color: #ffd700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  color: #ffd700;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #ffd700;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  background: #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #111;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.hero {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.voice-btn {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #111;
+  font-weight: 600;
+}
+
+form {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  color: #ffd700;
+}
+
+fieldset {
+  border: 1px solid #444;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+input[type="number"] {
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #ffd700;
+}
+
+.login-button {
+  background-color: #ffd700;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #111;
+  width: 100%;
+}
+
+.feature {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  color: #ffd700;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.chart-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #111;
+  color: #ffd700;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}

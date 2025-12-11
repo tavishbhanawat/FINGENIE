@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anomaly Detection – Fingenie</title>
+  <link rel="stylesheet" href="anomaly.css" />
+</head>
+<body>
+  <header class="header">
+    <button class="back-btn" onclick="window.location.href='index.html'" title="Back to Home">←</button>
+    <div class="logo-section">
+      <div class="logo-img" style="height:40px;width:40px;background:#ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;">F</div>
+      <span class="logo-text">Fingenie</span>
+    </div>
+    <div class="spacer"></div>
+  </header>
+
+  <section class="hero">
+    <h1>Anomaly Detection</h1>
+    <p>Detect suspicious or unusual financial activity with AI-powered alerts and auto-tagging.</p>
+    <button id="voice-btn" class="voice-btn" title="Voice Input">🎤 Speak Transaction</button>
+    <form id="anomaly-form" style="max-width:600px;margin:0 auto;text-align:left;">
+      <label>Transaction Description<br>
+        <input type="text" id="transaction-desc" required placeholder="Enter transaction description" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;">
+      </label><br>
+      <label>Transaction Amount<br>
+        <input type="number" id="transaction-amount" required placeholder="Enter transaction amount" style="width:100%;padding:8px;margin-bottom:10px;box-sizing:border-box;">
+      </label><br>
+      <button type="submit" class="login-button" style="width:100%;">Check Anomaly</button>
+    </form>
+
+    <div id="anomaly-summary" style="display:none;margin-top:30px;">
+      <div class="feature" style="background:#222; padding: 15px; border-radius: 12px;">
+        <div class="label">Anomaly Status</div>
+        <div id="anomaly-status" style="margin-top:10px; font-weight: bold; font-size: 18px;">No data yet.</div>
+      </div>
+      <div id="anomaly-ai-chat" style="margin:30px auto 0;max-width:600px;text-align:left;">
+        <div class="feature" style="background:#222;">
+          <div class="label">AI Insight</div>
+          <div id="ai-response" style="margin-top:10px;">Your anomaly detection insights will appear here.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Fingenie. Smart money moves start here.</p>
+  </footer>
+  <script type="module" src="auth-check.js"></script>
+  <script src="anomaly.js"></script>
+</body>
+</html>
